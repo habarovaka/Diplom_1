@@ -1,12 +1,9 @@
-# Виртуальное окружение
 venv/
 env/
-
-# Кэш Python и pytest
 __pycache__/
 *.pyc
 .pytest_cache/
-
-# Отчеты о покрытии
+.idea/
+.vscode/
 .coverage
 htmlcov/
