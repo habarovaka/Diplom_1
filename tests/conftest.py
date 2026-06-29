@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import Mock
 from praktikum.burger import Burger
+import data
 
 @pytest.fixture
 def burger():
@@ -11,15 +12,15 @@ def burger():
 def mock_bun():
     """Возвращает мок булочки с настроенными возвращаемыми значениями."""
     bun = Mock()
-    bun.get_price.return_value = 100.0
-    bun.get_name.return_value = "Флюоресцентная булка R2-D3"
+    bun.get_price.return_value = data.BUN_PRICE
+    bun.get_name.return_value = data.BUN_NAME
     return bun
 
 @pytest.fixture
 def mock_ingredient():
     """Возвращает мок ингредиента с настроенными возвращаемыми значениями."""
     ingredient = Mock()
-    ingredient.get_price.return_value = 50.0
-    ingredient.get_name.return_value = "Соус Spicy-X"
-    ingredient.get_type.return_value = "SAUCE"
+    ingredient.get_price.return_value = data.INGREDIENT_PRICE
+    ingredient.get_name.return_value = data.INGREDIENT_NAME
+    ingredient.get_type.return_value = data.INGREDIENT_TYPE
     return ingredient
